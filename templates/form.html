@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'index.html'%}
+
+{% block body  %}
+    
+<div  class="table-success">
+  <form class="row form-group" novalidate="novalidate"  method="post" enctype="multipart/form-data">
+
+    <div  class="col-md-6 form-group p_star">
+      <p>
+        <label for='name'>Name</label>
+        <input  class="form-control " type='text' name="name" required id='name'>
+      </p>
+      
+      
+      <p>
+          <label for='id_username'>User_Name</label>
+          <input type='text'class="form-control" name="user_name" required id='id_username'></p>
+      
+      <p>
+        <label for='id_email'>Email</label>
+        <input type='text' class="form-control" name="email" required id='id_email'>
+      </p>
+      
+      <p>
+        <label for='id_phone'>Phone</label>
+        <input type='number'  class="form-control" name="phone" required id='id_phone'>{{phone}}</input>
+      </p>
+      
+      <p>
+        <label for='id_password'>Enter_Password</label>
+        <input type='password' class="form-control" name="password" required id='id_password'>
+      </p>
+      <p>
+        <label for='pic'>Uplaod Images</label>
+        <input type='file' class="form-control"  name="pic">
+      </p>
+        {% csrf_token %}
+      <button type="text" value="submit" class="btn submit_btn">
+        submit
+      </button>
+      </p> 
+    
+    </div>
+  </form>
+
+</div>
+{% endblock %}
+<!----------------------------endform---------------------------------------->
+    

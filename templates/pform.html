@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'index.html'%}
+
+{% block body  %}
+    
+<div  class="table-success">
+  <form class="row form-group" novalidate="novalidate"  method="post" enctype="multipart/form-data">
+
+    <div  class="col-md-6 form-group p_star">
+      <p>
+          <label for='p_type'>Product Type</label>
+          <input type='text'class="form-control" name="p_type" ></p>
+      
+      <p>
+        <label for='p_size'>Product Size</label>
+        <input type='text' class="form-control" name="email" required id='p_size'>
+      </p>
+      
+      <p>
+        <label for='p_dis'>Product discripition</label>
+        <input type='number'  class="form-control" name="phone" required id='p_dis'>{{phone}}</input>
+      </p>
+      <p>
+        <label for='p_img'>Uplaod Images</label>
+        <input type='file' class="form-control"  name="p_img">
+      </p>
+        {% csrf_token %}
+      <button type="text" value="submit" class="btn submit_btn">
+        submit
+      </button>
+      </p> 
+    
+    </div>
+  </form>
+
+</div>
+{% endblock %}
+<!----------------------------endform---------------------------------------->
+    
